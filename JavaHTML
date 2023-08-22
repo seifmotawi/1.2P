@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Concepts Example</title>
+</head>
+<body>
+<script>
+  // String methods
+  const str = 'Hello, World!';
+  const stringLength = str.length;
+  const uppercase = str.toUpperCase();
+  const substring = str.substring(0, 5);
+  const indexOfWorld = str.indexOf('World');
+  const replacedHello = str.replace('Hello', 'Hi');
+
+  // Number methods
+  const num = 42.6789;
+  const numFixed = num.toFixed(2);
+  const numString = num.toString();
+  const numRounded = Math.round(num);
+  const squareRoot = Math.sqrt(num);
+  const randomNum = Math.random();
+
+  // Array methods
+  const fruits = ['apple', 'banana', 'cherry'];
+  const joinedFruits = fruits.join(', ');
+  const firstFruit = fruits[0];
+  const lastFruit = fruits[fruits.length - 1];
+  const indexOfBanana = fruits.indexOf('banana');
+  fruits.push('grape');
+
+  // Date methods
+  const now = new Date();
+  const currentDate = now.toDateString();
+  const currentTime = now.toLocaleTimeString();
+  const dayOfWeek = now.getDay();
+  const utcTimestamp = now.getTime();
+  const twoDaysLater = new Date(now.getTime() + 2 * 24 * 60 * 60 * 1000);
+
+  // Function methods
+  function greet(name) {
+    return 'Hello, ' + name + '!';
+  }
+  function multiply(a, b) {
+    return a * b;
+  }
+  const greeting = greet('Alice');
+  const multiplicationResult = multiply(5, 3);
+
+  // Displaying results on the page
+  document.write('<h2>String Methods</h2>');
+  document.write('<p>String length: ' + stringLength + '</p>');
+  document.write('<p>Uppercase: ' + uppercase + '</p>');
+  document.write('<p>Substring: ' + substring + '</p>');
+  document.write('<p>Index of "World": ' + indexOfWorld + '</p>');
+  document.write('<p>Replace "Hello" with "Hi": ' + replacedHello + '</p>');
+
+  document.write('<h2>Number Methods</h2>');
+  document.write('<p>Fixed to 2 decimals: ' + numFixed + '</p>');
+  document.write('<p>Converted to string: ' + numString + '</p>');
+  document.write('<p>Rounded to nearest integer: ' + numRounded + '</p>');
+  document.write('<p>Square root: ' + squareRoot + '</p>');
+  document.write('<p>Random number between 0 and 1: ' + randomNum + '</p>');
+
+  document.write('<h2>Array Methods</h2>');
+  document.write('<p>Join as string: ' + joinedFruits + '</p>');
+  document.write('<p>First element: ' + firstFruit + '</p>');
+  document.write('<p>Last element: ' + lastFruit + '</p>');
+  document.write('<p>Index of "banana": ' + indexOfBanana + '</p>');
+  document.write('<p>Added "grape" to end: ' + fruits + '</p>');
+
+  document.write('<h2>Date Methods</h2>');
+  document.write('<p>Current date: ' + currentDate + '</p>');
+  document.write('<p>Current time: ' + currentTime + '</p>');
+  document.write('<p>Day of the week (0-6): ' + dayOfWeek + '</p>');
+  document.write('<p>UTC timestamp: ' + utcTimestamp + '</p>');
+  document.write('<p>Date after adding 2 days: ' + twoDaysLater.toDateString() + '</p>');
+
+  document.write('<h2>Function Methods</h2>');
+  document.write('<p>' + greeting + '</p>');
+  document.write('<p>Result of multiplication: ' + multiplicationResult + '</p>');
+</script>
+</body>
+</html>
